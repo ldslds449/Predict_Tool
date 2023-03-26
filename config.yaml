@@ -1,0 +1,28 @@
+mode: predict # crop, predict, record
+model: ./data/models/best.onnx
+runtime: onnx_runtime # opencv_dnn, onnx_runtime, openvino, deepsparse
+yolov8: true
+saveFolder: ./data/
+input:
+  type: video # adb, video, image
+  path: ./data/videos/video.mp4
+  device: bluestack # bluestack, other
+  emulatorName: BlueStacks App Player 1
+  port: 2478
+  fps: 60
+  bitrate: 16000000
+record: # force to use adb connect
+crop:
+  type: dian # grid, dian
+  delay: 2000 # ms
+predict:
+  syncVideo: false
+
+grid:
+  540x960: 93,146,456,146,475,704,68,704
+  576x1280: 65,196,511,196,551,934,25,934
+  720x1280: 118,196,596,196,630,934,83,934
+  1080x2340: 108,408,984,408,1047,1713,45,1713
+interface:
+  type: gui # cli, gui, web
+  webport: 5000

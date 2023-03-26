@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "tools"
+version = "0.1.0"
+description = ""
+authors = ["ldslds449 <ldslds449@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7,<3.11"
+adbutils = "^1.2.9"
+opencv-python = "4.7.0.72"
+numpy = "1.21.6"
+dbscan1d = ">=0.1.6"
+scrcpy-client = "^0.4.7"
+pyyaml = "^6.0"
+onnxruntime-gpu = "^1.14.1"
+openvino = "^2022.3.0"
+deepsparse = "^1.4.2"
+torchvision = "0.14.1"
+
+[tool.poetry.group.dev.dependencies]
+pyinstaller = "^5.9.0"
+
+
+[tool.poetry.group.gui.dependencies]
+pywebview = "^4.0.2"
+flask-socketio = "^5.3.3"
+flask = {extras = ["async"], version = "^2.2.3"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
